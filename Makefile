@@ -92,7 +92,7 @@ $(VISUALC_FILES):
 	$(PERL) scripts/generate_visualc_files.pl
 
 ifndef WINDOWS
-install: no_test
+install: #no_test "no_test" doesn't work on 3DS.
 	mkdir -p $(DESTDIR)/include/mbedtls
 	cp -rp include/mbedtls $(DESTDIR)/include
 	mkdir -p $(DESTDIR)/include/psa
@@ -103,14 +103,15 @@ install: no_test
 	cp -RP library/libmbedx509.*   $(DESTDIR)/lib
 	cp -RP library/libmbedcrypto.* $(DESTDIR)/lib
 
-	mkdir -p $(DESTDIR)/bin
-	for p in programs/*/* ; do              \
-	    if [ -x $$p ] && [ ! -d $$p ] ;     \
-	    then                                \
-	        f=$(PREFIX)`basename $$p` ;     \
-	        cp $$p $(DESTDIR)/bin/$$f ;     \
-	    fi                                  \
-	done
+#It doesn't work (and we don't need) on 3DS.
+#	mkdir -p $(DESTDIR)/bin
+#	for p in programs/*/* ; do              \
+#	    if [ -x $$p ] && [ ! -d $$p ] ;     \
+#	    then                                \
+#	        f=$(PREFIX)`basename $$p` ;     \
+#	        cp $$p $(DESTDIR)/bin/$$f ;     \
+#	    fi                                  \
+#	done
 
 uninstall:
 	rm -rf $(DESTDIR)/include/mbedtls

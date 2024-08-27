@@ -128,7 +128,7 @@
  *       regardless of the setting of MBEDTLS_HAVE_TIME, unless
  *       MBEDTLS_TIMING_ALT is used. See timing.c for more information.
  */
-#define MBEDTLS_HAVE_TIME
+// #define MBEDTLS_HAVE_TIME
 
 /**
  * \def MBEDTLS_HAVE_TIME_DATE
@@ -149,7 +149,7 @@
  * mbedtls_platform_gmtime_r() at compile-time by using the macro
  * MBEDTLS_PLATFORM_GMTIME_R_ALT.
  */
-#define MBEDTLS_HAVE_TIME_DATE
+// #define MBEDTLS_HAVE_TIME_DATE
 
 /**
  * \def MBEDTLS_PLATFORM_MEMORY
@@ -540,7 +540,7 @@
  *
  * Uncomment to use your own hardware entropy collector.
  */
-//#define MBEDTLS_ENTROPY_HARDWARE_ALT
+#define MBEDTLS_ENTROPY_HARDWARE_ALT
 
 /**
  * \def MBEDTLS_AES_ROM_TABLES
@@ -1206,7 +1206,7 @@
  *
  * Uncomment this macro to disable the built-in platform entropy functions.
  */
-//#define MBEDTLS_NO_PLATFORM_ENTROPY
+#define MBEDTLS_NO_PLATFORM_ENTROPY
 
 /**
  * \def MBEDTLS_ENTROPY_FORCE_SHA256
@@ -2985,7 +2985,7 @@
  *
  * This module provides networking routines.
  */
-#define MBEDTLS_NET_C
+// #define MBEDTLS_NET_C
 
 /**
  * \def MBEDTLS_OID_C
@@ -3633,7 +3633,7 @@
  *
  * Module:  library/timing.c
  */
-#define MBEDTLS_TIMING_C
+// #define MBEDTLS_TIMING_C
 
 /**
  * \def MBEDTLS_VERSION_C
