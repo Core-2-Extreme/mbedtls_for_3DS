@@ -1,6 +1,8 @@
 [submodule "framework"]
 	path = framework
-	url = https://github.com/Mbed-TLS/mbedtls-framework
+	url = https://github.com/Core-2-Extreme/mbedtls-framework_for_3DS
+	branch = 3ds
 [submodule "tf-psa-crypto"]
 	path = tf-psa-crypto
-	url = https://github.com/Mbed-TLS/TF-PSA-Crypto.git
+	url = https://github.com/Core-2-Extreme/TF-PSA-Crypto_for_3ds
+	branch = 3ds
